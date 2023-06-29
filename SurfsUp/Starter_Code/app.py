@@ -97,7 +97,7 @@ def tobs():
 
     # Query the temperature observations for the most active station in the last 12 months
     results = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= one_year_ago). \
-        filter(Measurement.station == 'USC00519397').all()
+        filter(Measurement.station == 'USC00519281').all()
 
     # Convert the query results to a list of dictionaries
     temperature_data = [{date: tobs} for date, tobs in results]
